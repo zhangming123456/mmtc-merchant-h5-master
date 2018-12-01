@@ -1,0 +1,46 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false
+      }
+    ],
+    "stage-2"
+  ],
+  "plugins": [
+    "transform-runtime",
+    [
+      "import",
+      {
+        "libraryName": "muse-ui",
+        "libraryDirectory": "lib",
+        "camel2DashComponentName": false
+      },
+      {
+        "libraryName": "vant",
+        "libraryDirectory": "es",
+        "style": true
+      },
+      {
+        "libraryName": "iview",
+        "libraryDirectory": "es",
+        "style": true
+      }
+    ]
+  ],
+  "comments": false,
+  "env": {
+    "test": {
+      "presets": [
+        "env",
+        "stage-2"
+      ],
+      "plugins": [
+        "transform-es2015-modules-commonjs",
+        "dynamic-import-node",
+        "istanbul"
+      ]
+    }
+  }
+}
